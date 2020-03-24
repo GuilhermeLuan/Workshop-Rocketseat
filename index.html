@@ -13,6 +13,7 @@
     Language
     Linguagem
 -->
+
 <html> <!-- TAG HTML -->
 
     <head>
@@ -20,48 +21,7 @@
         <!-- Responsável por receber configurações da página-->
         <title>Casa Criativa</title>
         
-        <style>
-
-            /*
-            CSS
-
-            Cascading StyleSheet
-
-
-            */
-
-            
-            body{
-                background: #E5E5E5;
-                color: #25282B;
-
-                text-align: center;
-            }
-
-            button{
-                color: #FF5E84;
-
-                border: none;
-
-                font-weight: bold;
-                background: none;
-            }
-
-            .fat{
-                color: white;
-                background: #FF5E84;
-            }
-
-            #footer a {
-                color: #25282b;
-                text-decoration: none;
-            }
-
-            .hide{
-                display: none;
-            }
-
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body> 
@@ -82,23 +42,12 @@
             ideias cadastradas e contribua adicioando a sua ideia.
         </p>
 
-        <button>+ Adicionar Ideaia </button>
+        <button>+ Adicionar Ideai </button>
         <button class="fat">Ver ideias</button>
 
         <p id="footer">com ♥ <a href="https://steamcommunity.com/id/ygui__">yGuiCorp</a></p>
 
-
-        <script>
-            document
-                .querySelector("button.fat")
-                .addEventListener('click', function(){
-                    document
-                    .querySelector('#footer')
-                    .classList
-                    .toggle('hide')
-                    
-                })
-        </script>
+        <script src="scripts.js"></script>
     </body>
 
 </html>
