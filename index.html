@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--    
-    HTML
+    HTMLw
 
     Hiper textos
     Hypertext
@@ -57,6 +57,10 @@
                 text-decoration: none;
             }
 
+            .hide{
+                display: none;
+            }
+
         </style>
     </head>
 
@@ -83,6 +87,18 @@
 
         <p id="footer">com ♥ <a href="https://steamcommunity.com/id/ygui__">yGuiCorp</a></p>
 
+
+        <script>
+            document
+                .querySelector("button.fat")
+                .addEventListener('click', function(){
+                    document
+                    .querySelector('#footer')
+                    .classList
+                    .toggle('hide')
+                    
+                })
+        </script>
     </body>
 
 </html>
