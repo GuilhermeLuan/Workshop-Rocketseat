@@ -12,10 +12,13 @@
     "url": "git+https://github.com/guilhermeluan/Workshop---Rocketseat.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guilherme Luan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/guilhermeluan/Workshop---Rocketseat/issues"
   },
-  "homepage": "https://github.com/guilhermeluan/Workshop---Rocketseat#readme"
+  "homepage": "https://github.com/guilhermeluan/Workshop---Rocketseat#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
