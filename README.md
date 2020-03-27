@@ -16,3 +16,6 @@
 ## Adicionar novas ideias
 
 ![](https://github.com/guilhermeluan/Workshop-Rocketseat/blob/master/screenshots/nova_ideia.png?raw=true)
+
+# Gif's do site
+![](https://github.com/GuilhermeLuan/Workshop-Rocketseat/blob/master/screenshots/gif_ideias.gif)
