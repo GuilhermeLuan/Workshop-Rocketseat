@@ -1,127 +1,46 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<!--    
-    HTMLw
+{% block content %}
 
-    Hiper textos
-    Hypertext
-    São textos que aceitam links e audio visual
+<section id="intro">
 
-    Markup
-    Marcaçãoes feitas com <tags>
+    <header> <!-- Parte do cabeçalho-->
 
-    Language
-    Linguagem
--->
+        <a href="/">
+            <img src="/logo.png" alt="Imagem da Logomarca">
+        </a>
+    </header>
 
-<html> <!-- TAG HTML -->
+    <main> <!-- Conteudo principal! -->
+        <p>
+            Ficar em casa em períodos longos, não deve ser nada fácil.
+        </p>
 
-    <head>
-        <meta charset=UTF-8> <!-- Codificação dos caracteres-->
-        <!-- Responsável por receber configurações da página-->
-        <title>Casa Criativa</title>
-        
-        <link rel="stylesheet" href="/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
-    </head>
+        <p>
+            Por isso, iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, 
+            livros, cursos, dicas</strong> e tudo que for necessário para tornar
+            esse momento mais interessante.
+        </p>
 
-    <body> 
+        <p>
+            Comece clicando em ver ideias para ver as 
+            ideias cadastradas e contribua adicioando a sua ideia.
+        </p>
 
-        <div id="container">
-            <section id="intro">
+    </main>
 
-                <header> <!-- Parte do cabeçalho-->
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Ideai </button>
+        <a href='/ideias' class="button">Ver ideias</a>
+    </section>
 
-                    <a href="/">
-                        <img src="/logo.png" alt="Imagem da Logomarca">
-                    </a>
-                </header>
+    <footer>
+        Com ♥ <a href="https://steamcommunity.com/id/ygui__" target="_blank">yGuiCorp</a>
+    </footer>
+</section>
 
-                <main> <!-- Conteudo principal! -->
-                    <p>
-                        Ficar em casa em períodos longos, não deve ser nada fácil.
-                    </p>
-            
-                    <p>
-                        Por isso, iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, 
-                        livros, cursos, dicas</strong> e tudo que for necessário para tornar
-                        esse momento mais interessante.
-                    </p>
-            
-                    <p>
-                        Comece clicando em ver ideias para ver as 
-                        ideias cadastradas e contribua adicioando a sua ideia.
-                    </p>
+<section id="last-ideias">
+    {%include "all_ideas.html"%}
+</section>
 
-                </main>
-        
-                <section id="buttons">
-                    <button onclick="onOff()">+ Adicionar Ideai </button>
-                    <a href='/ideias' class="button">Ver ideias</a>
-                </section>
-        
-                <footer>
-                    Com ♥ <a href="https://steamcommunity.com/id/ygui__" target="_blank">yGuiCorp</a>
-                </footer>
-            </section>
-
-            <section id="last-ideias">
-
-                {% for idea in ideas %}
-                    <div class='idea'>
-                        <img src="{{idea.img}}" alt="{{idea.title}}">
-                        <div class="content">
-                            <h3>{{idea.title}}</h3>
-                            <p>{{idea.category}}</p>
-                            <div class="description">
-                                {{idea.description}}
-                            </div>
-                            <a href="{{idea.url}}" target="_blank">Ir para a Ideai</a>
-                        </div>
-                    </div>
-                {% endfor %}
-
-            </section>
-        </div>
-
-        <!-- Modal(POP-UP)-->
-
-        <div id="modal" class="hide">
-            <div class="content">
-                <h1>Nova ideia</h1>
-
-                <form action="">
-                
-                    <div class="input-wrapper">
-                        <label for="title">Título da Ideia</label>
-                        <input type="text" name="title">
-                    </div>
-
-                    <div class="input-wrapper">
-                        <label for="category">Categoria</label>
-                        <input type="text" name="category">
-                    </div>
-                
-                    <div class="input-wrapper">
-                        <label for="image">Link da imagem</label>
-                        <input type="url" name="image">
-                    </div>
-                
-                    <div class="input-wrapper">
-                        <label for="description">Digite uma descrição para essa ideia</label>
-                        <textarea name="description" cols="30" rows="10"></textarea>
-                    </div>
-                
-                    <div class="input-wrapper">
-                        <label for="link">Link da ideia</label>
-                        <input type="url" name="link">
-                    </div>
-                
-                    <a href="#" onclick="onOff()">Voltar</a>
-                    <button>Salvar</button>
-                </form>
-            </div>
-        </div>
-        <script src="/scripts.js"></script>
-    </body>
-</html>
+{% endblock %}

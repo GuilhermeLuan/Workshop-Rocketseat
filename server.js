@@ -31,6 +31,20 @@ const ideas = [
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla molestias saepe quia. ",
         url: "https://rocketseat.com.br"
     },
+    {
+        img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
+        title: "Pintura",
+        category: "Ciatividarde",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla molestias saepe quia. ",
+        url: "https://rocketseat.com.br"
+    },
+    {
+        img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
+        title: "Recortes",
+        category: "Ciatividarde",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla molestias saepe quia. ",
+        url: "https://rocketseat.com.br"
+    },
 ]
 
 // configurar arquivos estáticos (css, scripts, imagens)
@@ -49,8 +63,10 @@ nunjuncks.configure('views', {
 
 server.get("/", function(req, res) {
 
+    const reversedIdeas = [...ideas].reverse()
+
     let lastIdeas = []
-    for(let idea of ideas.reverse()){
+    for(let idea of reversedIdeas){
         if(lastIdeas.length < 2){
             lastIdeas.push(idea)
         }
@@ -61,9 +77,9 @@ server.get("/", function(req, res) {
 
 server.get("/ideias", function(req, res) {
 
+    const reversedIdeas = [...ideas].reverse()
 
-
-    return res.render("ideias.html", {ideas: ideas.reverse()})
+    return res.render("ideias.html", {ideas: reversedIdeas})
 })
 
 
