@@ -4,8 +4,8 @@
   "description": "<h1>Workshop Rocketseat</h1>\r <p>Olá, tudo bem? Esse é o repositório dos meus arquivos sobre o <strong>WorkshopDev</strong> Especial do canal <strong><a href=\"https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg\">Rocketseat</a></strong></p>",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
