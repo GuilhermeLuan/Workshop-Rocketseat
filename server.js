@@ -50,19 +50,20 @@ nunjuncks.configure('views', {
 server.get("/", function(req, res) {
 
     let lastIdeas = []
-    for(let idea of ideas){
+    for(let idea of ideas.reverse()){
         if(lastIdeas.length < 2){
             lastIdeas.push(idea)
         }
     }
 
-    lastIdeas = lastIdeas.reverse()
-
     return res.render("index.html", { ideas: lastIdeas })
 })
 
 server.get("/ideias", function(req, res) {
-    return res.render("ideias.html")
+
+
+
+    return res.render("ideias.html", {ideas: ideas.reverse()})
 })
 
 
