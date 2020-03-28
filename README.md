@@ -19,3 +19,7 @@
 
 # Gif's do site
 ![](https://github.com/GuilhermeLuan/Workshop-Rocketseat/blob/master/screenshots/gif_ideias.gif)
+
+![](https://github.com/GuilhermeLuan/Workshop-Rocketseat/blob/master/screenshots/gif3.gif)
+
+![](https://github.com/GuilhermeLuan/Workshop-Rocketseat/blob/master/screenshots/gif2.gif)
